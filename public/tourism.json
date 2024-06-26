@@ -1,0 +1,94 @@
+ [
+      {
+        "id":1,
+        "image": "https://example.com/images/tourist_spot_1.jpg",
+        "tourists_spot_name": "Eiffel Tower",
+        "average_cost": 200,
+        "totalVisitorsPerYear": 7000000,
+        "travel_time": "2 hours",
+        "seasonality": "Spring",
+        "viewDetailsLink": "/tourist_spots/eiffel_tower"
+      },
+      {
+        "id":2,
+        "image": "https://example.com/images/tourist_spot_2.jpg",
+        "tourists_spot_name": "Great Wall of China",
+        "average_cost": 150,
+        "totalVisitorsPerYear": 10000000,
+        "travel_time": "3 hours",
+        "seasonality": "Autumn",
+        "viewDetailsLink": "/tourist_spots/great_wall_of_china"
+      },
+      {
+        "id":3,
+        "image": "https://example.com/images/tourist_spot_3.jpg",
+        "tourists_spot_name": "Grand Canyon",
+        "average_cost": 100,
+        "totalVisitorsPerYear": 6000000,
+        "travel_time": "1.5 hours",
+        "seasonality": "Summer",
+        "viewDetailsLink": "/tourist_spots/grand_canyon"
+      },
+      {
+        "id":4,
+        "image": "https://example.com/images/tourist_spot_4.jpg",
+        "tourists_spot_name": "Machu Picchu",
+        "average_cost": 250,
+        "totalVisitorsPerYear": 5000000,
+        "travel_time": "4 hours",
+        "seasonality": "Winter",
+        "viewDetailsLink": "/tourist_spots/machu_picchu"
+      },
+      { 
+        "id":5,
+        "image": "https://example.com/images/tourist_spot_5.jpg",
+        "tourists_spot_name": "Sydney Opera House",
+        "average_cost": 180,
+        "totalVisitorsPerYear": 8000000,
+        "travel_time": "2.5 hours",
+        "seasonality": "Spring",
+        "viewDetailsLink": "/tourist_spots/sydney_opera_house"
+      },
+      {
+         "id":6,
+        "image": "https://example.com/images/tourist_spot_6.jpg",
+        "tourists_spot_name": "Statue of Liberty",
+        "average_cost": 90,
+        "totalVisitorsPerYear": 4300000,
+        "travel_time": "1 hour",
+        "seasonality": "Summer",
+        "viewDetailsLink": "/tourist_spots/statue_of_liberty"
+      },
+      {
+        "id":7,
+        "image": "https://example.com/images/tourist_spot_7.jpg",
+        "tourists_spot_name": "Colosseum",
+        "average_cost": 120,
+        "totalVisitorsPerYear": 6000000,
+        "travel_time": "2 hours",
+        "seasonality": "Spring",
+        "viewDetailsLink": "/tourist_spots/colosseum"
+      },
+      {
+        "id":8, 
+        "image": "https://example.com/images/tourist_spot_8.jpg",
+        "tourists_spot_name": "Taj Mahal",
+        "average_cost": 70,
+        "totalVisitorsPerYear": 8000000,
+        "travel_time": "3 hours",
+        "seasonality": "Winter",
+        "viewDetailsLink": "/tourist_spots/taj_mahal"
+      },
+    {
+        "id": 9,
+        "image": "https://example.com/images/tourist_spot_9.jpg",
+        "tourists_spot_name": "Christ the Redeemer",
+        "average_cost": 75,
+        "totalVisitorsPerYear": 2000000,
+        "travel_time": "1.5 hours",
+        "seasonality": "Spring",
+        "viewDetailsLink": "/tourist_spots/christ_the_redeemer"
+    }
+ ]
+  
+  

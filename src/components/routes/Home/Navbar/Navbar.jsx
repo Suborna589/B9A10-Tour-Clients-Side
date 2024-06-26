@@ -1,8 +1,10 @@
-import React from 'react';
+import React from 'react'; 
+import logo2 from '../../../../../public/logo2.jpg'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-[#d6eaf8] shadow-xl ">
+        <div className="navbar bg-[#fdfefe] shadow-xl ">
         <div className="navbar-start">
           <div className="dropdown">
           
@@ -23,13 +25,13 @@ const Navbar = () => {
           
           </div> 
           <div className='flex space-x-0 items-center gap-0'>
-            <div></div>
-            <div className=" pl-0 text-xl space-x-0"><span className='text-[#1ddb14] font-bold text-4xl mr-18'>TOUR</span><span className='text-[#db1414] font-bold text-3xl'>SPHERE</span></div>
+            <div><img className='w-14 h-14 rounded-2xl'src={logo2} /></div>
+            <div className=" pl-0 text-xl space-x-0"><span className='text-[#1ddb14] font-bold text-4xl mr-18'>TOUR </span><span className='text-[#2014db] font-bold text-4xl'>SPHERE</span></div>
 
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1text-xl font-semibold">
+          <ul className="menu menu-horizontal px-1 text-xl text-[#14d2db] font-semibold">
             <li><a>Home</a></li>
             <li><a>Add Tourists Spot</a></li>
             <li><a>My List</a></li>
@@ -37,9 +39,9 @@ const Navbar = () => {
             <li><a>All Tourists Spot</a></li>
           </ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn text-white text-lg bg-[#1ddb14] ">Sign In</a>
-          <a className="btn  text-white text-lg  bg-[#1ddb14]">Sign Up</a>
+        <div className="navbar-end gap-2">
+          <Link to="/login" className=" text-white text-lg btn btn-outline btn-accent font-bold rounded-xl ">LOGIN</Link>
+          <Link to="/signup"className="btn btn-outline btn-accent text-white text-lg font-bold  rounded-xl ">SIGNUP</Link>
         </div>
       </div>
     );
