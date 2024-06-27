@@ -1,7 +1,7 @@
  [
       {
         "id":1,
-        "image": "https://example.com/images/tourist_spot_1.jpg",
+        "image": "https://i.ibb.co/jVdLVV5/image-2.jpg",
         "tourists_spot_name": "Eiffel Tower",
         "average_cost": 200,
         "totalVisitorsPerYear": 7000000,
@@ -11,7 +11,7 @@
       },
       {
         "id":2,
-        "image": "https://example.com/images/tourist_spot_2.jpg",
+        "image": "https://i.ibb.co/N67HC7Q/image-3.jpg",
         "tourists_spot_name": "Great Wall of China",
         "average_cost": 150,
         "totalVisitorsPerYear": 10000000,
@@ -21,7 +21,7 @@
       },
       {
         "id":3,
-        "image": "https://example.com/images/tourist_spot_3.jpg",
+        "image": "https://i.ibb.co/N67HC7Q/image-3.jpg",
         "tourists_spot_name": "Grand Canyon",
         "average_cost": 100,
         "totalVisitorsPerYear": 6000000,
@@ -31,7 +31,7 @@
       },
       {
         "id":4,
-        "image": "https://example.com/images/tourist_spot_4.jpg",
+        "image": "https://i.ibb.co/N67HC7Q/image-3.jpg",
         "tourists_spot_name": "Machu Picchu",
         "average_cost": 250,
         "totalVisitorsPerYear": 5000000,
@@ -41,7 +41,7 @@
       },
       { 
         "id":5,
-        "image": "https://example.com/images/tourist_spot_5.jpg",
+        "image": "https://i.ibb.co/N67HC7Q/image-3.jpg",
         "tourists_spot_name": "Sydney Opera House",
         "average_cost": 180,
         "totalVisitorsPerYear": 8000000,
@@ -51,7 +51,7 @@
       },
       {
          "id":6,
-        "image": "https://example.com/images/tourist_spot_6.jpg",
+        "image": "https://i.ibb.co/N67HC7Q/image-3.jpg",
         "tourists_spot_name": "Statue of Liberty",
         "average_cost": 90,
         "totalVisitorsPerYear": 4300000,
@@ -61,7 +61,7 @@
       },
       {
         "id":7,
-        "image": "https://example.com/images/tourist_spot_7.jpg",
+        "image": "https://i.ibb.co/N67HC7Q/image-3.jpg",
         "tourists_spot_name": "Colosseum",
         "average_cost": 120,
         "totalVisitorsPerYear": 6000000,
@@ -71,7 +71,7 @@
       },
       {
         "id":8, 
-        "image": "https://example.com/images/tourist_spot_8.jpg",
+        "image": "https://i.ibb.co/N67HC7Q/image-3.jpg",
         "tourists_spot_name": "Taj Mahal",
         "average_cost": 70,
         "totalVisitorsPerYear": 8000000,
@@ -81,7 +81,7 @@
       },
     {
         "id": 9,
-        "image": "https://example.com/images/tourist_spot_9.jpg",
+        "image": "https://i.ibb.co/N67HC7Q/image-3.jpg",
         "tourists_spot_name": "Christ the Redeemer",
         "average_cost": 75,
         "totalVisitorsPerYear": 2000000,
