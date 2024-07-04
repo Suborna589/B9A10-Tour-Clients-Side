@@ -32,11 +32,11 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-xl text-[#14d2db] font-semibold">
-            <li><a>Home</a></li>
-            <li><a>Add Tourists Spot</a></li>
-            <li><a>My List</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/addspot">Add Tourists Spot</Link></li>
+            <li><Link to="/list">My List</Link></li>
             
-            <li><a>All Tourists Spot</a></li>
+            <li><Link to="/allspot">All Tourists Spot</Link></li>
           </ul>
         </div>
         <div className="navbar-end gap-2">

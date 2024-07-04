@@ -1,15 +1,17 @@
 import React from 'react';
 import login from '../../../../../../public/login.jpg'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; 
+import { FaCircleUser } from 'react-icons/fa6';
+
 
 const LogIn = () => {
     return (
-        <div className="hero bg-base-200 min-h-screen">
+        <div className="hero bg-[#ebf5fb] min-h-screen">
         <div className="hero-content lg:flex-row gap-24"> 
         {/* lg:flex-row-reverse">  */}
 
         <div className="text-center lg:text-left">
-            <img className='shadow-2xl w-[560px] h-[440px] rounded-xl' src={login} alt="" />
+            <img className=' w-[560px] h-[440px] rounded-xl' src={login} alt="" />
           
           </div>
          
@@ -17,7 +19,8 @@ const LogIn = () => {
             <form className="card-body "> 
                 
               <div className="form-control"> 
-              <p className="text-center text-white font-bold text-3xl">Sign in Now</p>
+        
+              <FaCircleUser className='w-[70px] h-[60px]  ml-40 '/>
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>

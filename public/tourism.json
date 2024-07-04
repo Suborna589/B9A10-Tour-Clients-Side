@@ -1,94 +1,229 @@
- [
-      {
-        "id":1,
-        "image": "https://i.ibb.co/jVdLVV5/image-2.jpg",
-        "tourists_spot_name": "Eiffel Tower",
-        "average_cost": 200,
-        "totalVisitorsPerYear": 7000000,
-        "travel_time": "2 hours",
-        "seasonality": "Spring",
-        "viewDetailsLink": "/tourist_spots/eiffel_tower"
-      },
-      {
-        "id":2,
-        "image": "https://i.ibb.co/N67HC7Q/image-3.jpg",
-        "tourists_spot_name": "Great Wall of China",
-        "average_cost": 150,
-        "totalVisitorsPerYear": 10000000,
-        "travel_time": "3 hours",
-        "seasonality": "Autumn",
-        "viewDetailsLink": "/tourist_spots/great_wall_of_china"
-      },
-      {
-        "id":3,
-        "image": "https://i.ibb.co/N67HC7Q/image-3.jpg",
-        "tourists_spot_name": "Grand Canyon",
-        "average_cost": 100,
-        "totalVisitorsPerYear": 6000000,
-        "travel_time": "1.5 hours",
-        "seasonality": "Summer",
-        "viewDetailsLink": "/tourist_spots/grand_canyon"
-      },
-      {
-        "id":4,
-        "image": "https://i.ibb.co/N67HC7Q/image-3.jpg",
-        "tourists_spot_name": "Machu Picchu",
-        "average_cost": 250,
-        "totalVisitorsPerYear": 5000000,
-        "travel_time": "4 hours",
-        "seasonality": "Winter",
-        "viewDetailsLink": "/tourist_spots/machu_picchu"
-      },
-      { 
-        "id":5,
-        "image": "https://i.ibb.co/N67HC7Q/image-3.jpg",
-        "tourists_spot_name": "Sydney Opera House",
-        "average_cost": 180,
-        "totalVisitorsPerYear": 8000000,
-        "travel_time": "2.5 hours",
-        "seasonality": "Spring",
-        "viewDetailsLink": "/tourist_spots/sydney_opera_house"
-      },
-      {
-         "id":6,
-        "image": "https://i.ibb.co/N67HC7Q/image-3.jpg",
-        "tourists_spot_name": "Statue of Liberty",
-        "average_cost": 90,
-        "totalVisitorsPerYear": 4300000,
-        "travel_time": "1 hour",
-        "seasonality": "Summer",
-        "viewDetailsLink": "/tourist_spots/statue_of_liberty"
-      },
-      {
-        "id":7,
-        "image": "https://i.ibb.co/N67HC7Q/image-3.jpg",
-        "tourists_spot_name": "Colosseum",
-        "average_cost": 120,
-        "totalVisitorsPerYear": 6000000,
-        "travel_time": "2 hours",
-        "seasonality": "Spring",
-        "viewDetailsLink": "/tourist_spots/colosseum"
-      },
-      {
-        "id":8, 
-        "image": "https://i.ibb.co/N67HC7Q/image-3.jpg",
-        "tourists_spot_name": "Taj Mahal",
-        "average_cost": 70,
-        "totalVisitorsPerYear": 8000000,
-        "travel_time": "3 hours",
-        "seasonality": "Winter",
-        "viewDetailsLink": "/tourist_spots/taj_mahal"
-      },
-    {
-        "id": 9,
-        "image": "https://i.ibb.co/N67HC7Q/image-3.jpg",
-        "tourists_spot_name": "Christ the Redeemer",
-        "average_cost": 75,
-        "totalVisitorsPerYear": 2000000,
-        "travel_time": "1.5 hours",
-        "seasonality": "Spring",
-        "viewDetailsLink": "/tourist_spots/christ_the_redeemer"
-    }
- ]
-  
-  
+[
+  {
+    "id": 1,
+    "image_url": "https://i.ibb.co/2tshsv6/spot-2.jpg",
+    "tourist_spot_name": "Sundarban",
+    "country_Name": "Bangladesh",
+    "location": "Southwestern region",
+    "short_description": "The largest mangrove forest in the world, home to the Royal Bengal Tiger.",
+    "average_cost": 800,
+    "seasonality": "Winter",
+    "travel_time": "3 days",
+    "totalVisitorsPerYear": 50000
+  },
+  {
+    "id": 2,
+    "image_url": "https://i.ibb.co/52xrpWT/spot-3.jpg",
+    "tourist_spot_name": "Cox’s Bazar",
+    "country_Name": "Bangladesh",
+    "location": "Southeastern coast",
+    "short_description": "The longest natural sea beach in the world, stretching over 120 kilometers.",
+    "average_cost": 600,
+    "seasonality": "Summer",
+    "travel_time": "4 days",
+    "totalVisitorsPerYear": 150000
+  },
+  {
+    "id": 3,
+    "image_url": "https://i.ibb.co/ZSnmDDd/spot-4.jpg",
+    "tourist_spot_name": "Rangamati",
+    "country_Name": "Bangladesh",
+    "location": "Chittagong Hill Tracts",
+    "short_description": "A picturesque hill district known for its scenic beauty and lakes.",
+    "average_cost": 700,
+    "seasonality": "Winter",
+    "travel_time": "3 days",
+    "totalVisitorsPerYear": 30000
+  },
+  {
+    "id": 4,
+    "image_url": "https://i.ibb.co/6whqKd1/spot-8.jpg",
+    "tourist_spot_name": "Bandarban",
+    "country_Name": "Bangladesh",
+    "location": "Chittagong Hill Tracts",
+    "short_description": "A beautiful hill district with lush green hills, waterfalls, and tribal villages.",
+    "average_cost": 750,
+    "seasonality": "Winter",
+    "travel_time": "3 days",
+    "totalVisitorsPerYear": 28000
+  },
+  {
+    "id": 5,
+    "image_url": "https://i.ibb.co/wdZJ2vL/spot-7.webp",
+    "tourist_spot_name": "Saint Martin’s Island",
+    "country_Name": "Bangladesh",
+    "location": "Bay of Bengal",
+    "short_description": "The only coral island in Bangladesh, known for its crystal-clear waters and serene beaches.",
+    "average_cost": 900,
+    "seasonality": "Winter",
+    "travel_time": "4 days",
+    "totalVisitorsPerYear": 40000
+  },
+  {
+    "id": 6,
+    "image_url": "https://i.ibb.co/2s9NPJ1/spot-9.jpg",
+    "tourist_spot_name": "Bangkok",
+    "country_Name": "Thailand",
+    "location": "Central region",
+    "short_description": "Thailand's bustling capital city, known for its vibrant street life and cultural landmarks.",
+    "average_cost": 1000,
+    "seasonality": "All year",
+    "travel_time": "5 days",
+    "totalVisitorsPerYear": 220000
+  },
+  {
+    "id": 7,
+    "image_url": "https://i.ibb.co/j5s1b0p/spot-10.jpg",
+    "tourist_spot_name": "Chiang Mai",
+    "country_Name": "Thailand",
+    "location": "Northern region",
+    "short_description": "A city rich in history and culture, surrounded by mountains and lush countryside.",
+    "average_cost": 900,
+    "seasonality": "Winter",
+    "travel_time": "6 days",
+    "totalVisitorsPerYear": 100000
+  },
+
+  {
+    "id": 8,
+    "image_url": "https://i.ibb.co/Jsq1CJN/spot-23.webp",
+    "tourist_spot_name": "Phi Phi Islands",
+    "country_Name": "Thailand",
+    "location": "Southern region",
+    "short_description": "A stunning archipelago known for its crystal-clear waters, beautiful beaches, and vibrant marine life.",
+    "average_cost": 950,
+    "seasonality": "All year",
+    "travel_time": "5 days",
+    "totalVisitorsPerYear": 120000
+  },
+  {
+    "id": 9,
+    "image_url": "https://i.ibb.co/TL7GXgJ/spot-11.webp",
+    "tourist_spot_name": "Bali",
+    "country_Name": "Indonesia",
+    "location": "Island province",
+    "short_description": "A popular tourist destination known for its forested volcanic mountains, iconic rice paddies, beaches, and coral reefs.",
+    "average_cost": 1200,
+    "seasonality": "All year",
+    "travel_time": "7 days",
+    "totalVisitorsPerYear": 600000
+  },
+
+  {
+    "id": 10,
+    "image_url": "https://i.ibb.co/cvYw5j0/spot-12.jpg",
+    "tourist_spot_name": "Komodo National Park",
+    "country_Name": "Indonesia",
+    "location": "Lesser Sunda Islands",
+    "short_description": "A national park known for its Komodo dragons, the largest lizards on earth.",
+    "average_cost": 1300,
+    "seasonality": "Spring",
+    "travel_time": "6 days",
+    "totalVisitorsPerYear": 140000
+  },
+  {
+    "id": 11,
+    "image_url": "https://i.ibb.co/qMHTy1K/spot-22.jpg",
+    "tourist_spot_name": "Raja Ampat Islands",
+    "country_Name": "Indonesia",
+    "location": "West Papua",
+    "short_description": "A pristine archipelago known for its rich marine biodiversity and diving spots.",
+    "average_cost": 1500,
+    "seasonality": "All year",
+    "travel_time": "8 days",
+    "totalVisitorsPerYear": 100000
+  },
+
+  {
+    "id": 12,
+    "image_url": "https://i.ibb.co/vvtBKsV/spot-13.jpg",
+    "tourist_spot_name": "Kuala Lumpur",
+    "country_Name": "Malaysia",
+    "location": "West coast of Peninsular Malaysia",
+    "short_description": "Malaysia's capital, known for its modern skyline dominated by the iconic Petronas Twin Towers.",
+    "average_cost": 1100,
+    "seasonality": "All year",
+    "travel_time": "5 days",
+    "totalVisitorsPerYear": 300000
+  },
+  {
+    
+    "id": 13,
+    "image_url": "https://i.ibb.co/fpZfdTj/spot-21.jpg",
+    "tourist_spot_name": "Langkawi",
+    "country_Name": "Malaysia",
+    "location": "Northwestern coast",
+    "short_description": "A picturesque archipelago of 99 islands, known for its beaches, mangroves, and duty-free shopping.",
+    "average_cost": 1000,
+    "seasonality": "Winter",
+    "travel_time": "6 days",
+    "totalVisitorsPerYear": 200000
+  },
+  {
+    "id": 14,
+    "image_url": "https://i.ibb.co/nzvDTrp/spot-19.jpg",
+    "tourist_spot_name": "Penang",
+    "country_Name": "Malaysia",
+    "location": "Northwestern coast",
+    "short_description": "An island state known for its diverse culture, historic Georgetown, and delicious street food.",
+    "average_cost": 950,
+    "seasonality": "All year",
+    "travel_time": "5 days",
+    "totalVisitorsPerYear": 180000
+  },
+  {
+    "id": 15,
+    "image_url": "https://i.ibb.co/yk8Zr1L/spot-24.jpg",
+    "tourist_spot_name": "Cameron Highlands",
+    "country_Name": "Malaysia",
+    "location": "West coast of Peninsular Malaysia",
+    "short_description": "A hill station known for its tea plantations, cool climate, and scenic beauty.",
+    "average_cost": 850,
+    "seasonality": "Summer",
+    "travel_time": "4 days",
+    "totalVisitorsPerYear": 90000
+  },
+ 
+  {
+    "id": 16,
+    "image_url": "https://i.ibb.co/f4TRbCH/spot-15.jpg",
+    "tourist_spot_name": "Ha Long Bay",
+    "country_Name": "Vietnam",
+    "location": "Northeast region",
+    "short_description": "A UNESCO World Heritage Site known for its emerald waters and thousands of towering limestone islands.",
+    "average_cost": 1300,
+    "seasonality": "Spring",
+    "travel_time": "4 days",
+    "totalVisitorsPerYear": 250000
+  },
+
+
+  {
+    "id": 18,
+    "image_url": "https://i.ibb.co/yPjV3rV/spot-25.jpgnpm",
+    "tourist_spot_name": "Phong Nha Caves",
+    "country_Name": "Vietnam",
+    "location": "North Central Coast",
+    "short_description": "A UNESCO World Heritage Site featuring some of the world's most beautiful and largest caves.",
+    "average_cost": 1000,
+    "seasonality": "Summer",
+    "travel_time": "5 days",
+    "totalVisitorsPerYear": 80000
+  },
+
+
+
+
+  {
+    "id": 21,
+    "image_url": "https://i.ibb.co/yyndNMv/spot-18.png",
+    "tourist_spot_name": "Bokor National Park",
+    "country_Name": "Cambodia",
+    "location": "Southwestern Cambodia",
+    "short_description": "A national park known for its cool climate, waterfalls, and abandoned French colonial buildings.",
+    "average_cost": 950,
+    "seasonality": "Winter",
+    "travel_time": "4 days",
+    "totalVisitorsPerYear": 500000
+  }
+]

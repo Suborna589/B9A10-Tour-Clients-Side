@@ -1,10 +1,12 @@
 import React from 'react';
+import notfind from "../../../../public/notfind.jpg" 
+
 
 const NotFound = () => {
     return (
         <div className='text-center'> 
-            <h1 className='text-xl  font-bold'>404</h1> 
-            <h2  className='text-xl  font-bold'>NOT FOUND</h2>
+        
+            <img className=" w-[670px] h-[620px] ml-96"  src={notfind} alt="" />
             
         </div>
     );
