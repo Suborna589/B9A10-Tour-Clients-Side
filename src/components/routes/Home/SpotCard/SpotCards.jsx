@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SpotCards = ({tourists}) => {
     const{image_url,tourists_spot_name,average_cost,totalVisitorsPerYear,travel_time,seasonality}=tourists;
@@ -17,7 +18,7 @@ const SpotCards = ({tourists}) => {
     <p>{seasonality}</p>
    
     <div className="card-actions justify-end">
-      <button className="btn btn-primary">View Details</button>
+   <Link to='/details'><button className="btn btn-primary">View Details</button></Link>
    
     </div>
   </div>

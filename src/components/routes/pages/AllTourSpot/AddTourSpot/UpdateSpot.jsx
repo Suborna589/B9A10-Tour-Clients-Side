@@ -1,9 +1,13 @@
+//  
+
 import React from 'react';
 import { MdLibraryAdd } from 'react-icons/md';
+import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2'
-       const AddTourSpot = () => { 
-
-           const handleAddTourSpot= event=>{  
+       const UpdateSpot = () => { 
+const spott=useLoaderData(); 
+const {_id,image,spot,country,location,cost,seasonality,time,visit,description} =spott;
+           const handleUpdateTourSpot= event=>{  
       event.preventDefault(); 
         const form=event.target; 
         const image=form.image.value;
@@ -15,23 +19,22 @@ import Swal from 'sweetalert2'
         const time=form.time.value;
         const visit=form.visit.value;
         const description=form.description.value;
-        const email=form.email.value;
-        const name=form.name.value; 
+        
 
-        const newSpot={image,spot,country,location,cost,seasonality,time,visit,email,name,description} 
-        console.log(newSpot); 
+        const updateSpot={image,spot,country,location,cost,seasonality,time,visit,description} 
+        console.log(updateSpot); 
 
         // send data to the server 
-        fetch('http://localhost:5000/spot',{ 
+        fetch(`http://localhost:5000/list/${_id}`,{ 
 
 
-          method:'POST',
+          method:'PUT',
 
           headers:{
             'content-type':'application/json'
           },
 
-          body: JSON.stringify(newSpot)
+          body: JSON.stringify(updateSpot)
 
 
 
@@ -40,10 +43,10 @@ import Swal from 'sweetalert2'
         .then(res=>res.json()) 
         .then(data=>{
           console.log(data); 
-          if(data.insertedId){ 
+          if(data.modifiedCount>0){ 
             Swal.fire({
               title: 'Success!',
-              text: 'User Added Successfully',
+              text: 'Tourist Spot Successfully',
               icon: 'success',
               confirmButtonText: 'Cool'
             })
@@ -64,12 +67,12 @@ import Swal from 'sweetalert2'
 
             </div> 
           <div>
-           <span className='text-center ml-8 font-bold text-4xl text-[#01DF01]  h-[60px] w-[600px] '>Add New Tourist Spot</span>
+           <span className='text-center ml-8 font-bold text-4xl text-[#01DF01]  h-[60px] w-[600px] '>Update Tourist Spot:{country}</span>
 
           </div>
         </div>
 
-               <form onSubmit={handleAddTourSpot} className=''> 
+               <form onSubmit={handleUpdateTourSpot} className=''> 
                 
                 <div>
 
@@ -78,7 +81,7 @@ import Swal from 'sweetalert2'
     <span className="label-text">Image URL</span>
   </div>
 
-  <input type="text" placeholder="Image URL" name='image' className="input input-bordered w-[880px] " />
+  <input type="text" placeholder="Image URL" name='image' defaultValue={image}  className="input input-bordered w-[880px] " />
 
 </label>
         </div>
@@ -89,7 +92,7 @@ import Swal from 'sweetalert2'
   <div className="label">
     <span className="label-text">Tourist Spot Name</span>
   </div>
-  <input type="text" placeholder="Tourist Spot Name" name="spot" className="input input-bordered w-[400px]" />
+  <input type="text" placeholder="Tourist Spot Name" name="spot"  defaultValue={spot} className="input input-bordered w-[400px]" />
 
 </label>
         </div>
@@ -99,7 +102,7 @@ import Swal from 'sweetalert2'
   <div className="label">
     <span className="label-text">Country Name</span>
   </div>
-  <input type="text" placeholder="Country Name" name="country" className="input input-bordered w-[400px]" />
+  <input type="text" placeholder="Country Name" name="country"  defaultValue={country}  className="input input-bordered w-[400px]" />
 
 </label>
         </div>
@@ -109,7 +112,7 @@ import Swal from 'sweetalert2'
   <div className="label">
     <span className="label-text">Location</span>
   </div>
-  <input type="text" placeholder="Location" name="location" className="input input-bordered w-[400px]" />
+  <input type="text" placeholder="Location" name="location"  defaultValue={location} className="input input-bordered w-[400px]" />
 
 </label>
         </div>
@@ -120,7 +123,7 @@ import Swal from 'sweetalert2'
   <div className="label">
     <span className="label-text">Average Cost</span>
   </div>
-  <input type="text" placeholder="Average Cost" name="cost" className="input input-bordered w-[400px]" />
+  <input type="text" placeholder="Average Cost" name="cost"  defaultValue={cost}  className="input input-bordered w-[400px]" />
 
 </label>
         </div> 
@@ -131,7 +134,7 @@ import Swal from 'sweetalert2'
   <div className="label">
     <span className="label-text">Seasonality </span>
   </div>
-  <input type="text" placeholder="Seasonality" name="seasonality" className="input input-bordered w-[400px]" />
+  <input type="text" placeholder="Seasonality" name="seasonality" defaultValue={seasonality} className="input input-bordered w-[400px]" />
 
 </label>
         </div> 
@@ -141,7 +144,7 @@ import Swal from 'sweetalert2'
   <div className="label">
     <span className="label-text">Travel Time </span>
   </div>
-  <input type="text" placeholder="travel_time " name="time" className="input input-bordered w-[400px] " />
+  <input type="text" placeholder="travel_time " name="time" defaultValue={time}  className="input input-bordered w-[400px] " />
 
 </label>
         </div> 
@@ -151,30 +154,11 @@ import Swal from 'sweetalert2'
   <div className="label">
     <span className="label-text">TotaVisitorsPerYear</span>
   </div>
-  <input type="text" placeholder="TotaVisitorsPerYear" name="visit" className="input input-bordered w-[400px]" />
+  <input type="text" placeholder="TotaVisitorsPerYear" name="visit" defaultValue={visit}   className="input input-bordered w-[400px]" />
 
 </label>
         </div> 
-                <div>
-
-                <label className="form-control ">
-  <div className="label">
-    <span className="label-text">User Email</span>
-  </div>
-  <input type="email" placeholder="User Email" name="email" className="input input-bordered w-[400px]" />
-
-</label>
-        </div> 
-                <div>
-
-                <label className="form-control ">
-  <div className="label">
-    <span className="label-text">User Name</span>
-  </div>
-  <input type="text" placeholder="User Name" name="name" className="input input-bordered w-[400px]" />
-
-</label>
-        </div>  
+       
 
             <div>
 
@@ -182,7 +166,7 @@ import Swal from 'sweetalert2'
 <div className="label">
 <span className="label-text">Short description</span>
 </div>
-<input type="text" placeholder="short description" name="description" className="input input-bordered w-[400px] " />
+<input type="text" placeholder="short description"  name="description" defaultValue={description} className="input input-bordered w-[400px] " />
 
 </label>
 </div> 
@@ -196,7 +180,7 @@ import Swal from 'sweetalert2'
 <span className="w-full h-full bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] absolute"></span>
 <span className=" w-[890px] relative px-6 py-3 transition-all ease-out bg-gray-900 rounded-md group-hover:bg-opacity-0 duration-400">
 
-  <input type="submit"  value="Add  New Spot" className="  ml-80 text-2xl text-white"/> 
+  <input type="submit"  value="Update Tourist Spot" className="  ml-80 text-2xl text-white"/> 
 
     
         
@@ -210,4 +194,4 @@ import Swal from 'sweetalert2'
     );
 };
 
-export default AddTourSpot;
+export default UpdateSpot;

@@ -8,6 +8,10 @@ import SignUp from "../Home/Navbar/SignUp/SignUp";
 import AllTourSpot from "../pages/AllTourSpot/AllTourSpot";
 import MyList from "../pages/AllTourSpot/MyList/MyList";
 import AddTourSpot from "../pages/AllTourSpot/AddTourSpot/AddTourSpot";
+import ViewDetails from "../Home/ViewDetails/ViewDetails";
+import PrivateRoute from "./PrivateRoute";
+import App from "../../../App";
+import UpdateSpot from "../pages/AllTourSpot/AddTourSpot/UpdateSpot";
 
 const router =createBrowserRouter([
     {
@@ -15,11 +19,13 @@ const router =createBrowserRouter([
         element:<Root></Root>  , 
         errorElement:<NotFound></NotFound>,
 
-        children:[ 
+        children:[  
+       
 
-            {
+            { 
+       
                 path:'/', 
-                loader:()=>fetch("/tourism.json"),
+                loader:()=>fetch("/tourism.json"), 
                 element:<Home></Home>
             }, 
 
@@ -38,13 +44,26 @@ const router =createBrowserRouter([
 
             {
                 path:'/list', 
-                element:<MyList></MyList>,
+                element:<MyList></MyList>, 
+                loader:()=>fetch('http://localhost:5000/spot')
             },
 
             {
                 path:"/allspot",
-                element:<AllTourSpot></AllTourSpot>
-            }
+                element:<AllTourSpot></AllTourSpot> ,
+               
+            },
+            {
+                path:'/details',
+                element:<ViewDetails></ViewDetails>, 
+                
+            } ,
+            { 
+                path:'list/updateSpot/:id',
+                element:<UpdateSpot></UpdateSpot>, 
+                loader:({params})=> fetch (`http://localhost:5000/spot/${params.id}`)
+
+            },
           
 
         ]
