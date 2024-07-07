@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-const ListCard = ({spott}) => { 
+const ListCard = ({spott,spots,setSpots}) => { 
     const {_id,image,spot,country,location,cost,seasonality,time,visit,email,name,}=spott; 
 
 
@@ -35,7 +35,10 @@ const ListCard = ({spott}) => {
             title: "Deleted!",
             text: "Your Spot has been deleted.",
             icon: "success"
-          });
+          }); 
+
+          const remaining=spots.filter(spt=>spt._id !==_id);
+          setSpots(remaining);
 
              }
           })
@@ -48,10 +51,10 @@ const ListCard = ({spott}) => {
     }
     return (
         <div> 
-     <div className="card card-side h-[340px] bg-base-100 shadow-xl">
+     <div className="card card-side w-[1000px] h-[360px] bg-base-100 shadow-xl">
   <figure>
     <img
-      src={image} className='w-[330px] h-[340px]'
+      src={image} className='w-[350px] h-[360px]'
       alt="Movie" />
   </figure>
   <div className="card-body">

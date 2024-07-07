@@ -1,5 +1,6 @@
 import React from 'react';
 import { MdLibraryAdd } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2'
        const AddTourSpot = () => { 
 
@@ -43,7 +44,7 @@ import Swal from 'sweetalert2'
           if(data.insertedId){ 
             Swal.fire({
               title: 'Success!',
-              text: 'User Added Successfully',
+              text: 'Tourist Spot Added Successfully',
               icon: 'success',
               confirmButtonText: 'Cool'
             })
@@ -57,14 +58,20 @@ import Swal from 'sweetalert2'
     // <h1 className='text-center ml-[430px] font-bold text-4xl text-[#0000FF] h-[60px] w-[600px] '>Add New Tourist Spot</h1>
     
     return (
-        <div className='bg-[#EFFBFB] w-[1120px] h-[700px] p-6 ml-32 mb-10 rounded-xl mt-12 shadow-xl' >  
+     
+  <div>
+      <div className='bg-[url("https://i.ibb.co/fdjrXkv/add.webp")] w-[1350px]  rounded-xl h-[50px] pb-[400px]  bg-cover  text-center rounded-xl  justify-center mt-8 mx-auto max-w-8xl'>
+      <p className='text-white text-4xl  pt-48 font-bold pb-6'>Added Tourist Spot </p> 
+   <Link className ='text-xl font-semibold' to='/'><span className='text-[#f36012] '>Go Home</span></Link>  
+  </div>
+        <div className='bg-[#FFFAFA] w-[1120px] h-[700px] p-6 ml-32 mb-10 rounded-xl mt-12 shadow-xl' >  
         <div className='flex'>
           <div>
        <MdLibraryAdd className='ml-[300px] text-4xl text-[#FF0000]'>   </MdLibraryAdd>
 
             </div> 
           <div>
-           <span className='text-center ml-8 font-bold text-4xl text-[#01DF01]  h-[60px] w-[600px] '>Add New Tourist Spot</span>
+           <span className='text-center ml-8 font-bold text-4xl text-[#00FF00]  h-[60px] w-[600px] '>Add New Tourist Spot</span>
 
           </div>
         </div>
@@ -206,6 +213,7 @@ import Swal from 'sweetalert2'
 
        
             </form>
+        </div> 
         </div>
     );
 };

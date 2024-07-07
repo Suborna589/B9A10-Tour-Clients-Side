@@ -50,7 +50,8 @@ const router =createBrowserRouter([
 
             {
                 path:"/allspot",
-                element:<AllTourSpot></AllTourSpot> ,
+                element:<AllTourSpot></AllTourSpot> , 
+                loader:()=>fetch("/tourism.json"),
                
             },
             {
