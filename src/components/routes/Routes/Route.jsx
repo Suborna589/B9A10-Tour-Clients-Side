@@ -12,6 +12,7 @@ import ViewDetails from "../Home/ViewDetails/ViewDetails";
 import PrivateRoute from "./PrivateRoute";
 import App from "../../../App";
 import UpdateSpot from "../pages/AllTourSpot/AddTourSpot/UpdateSpot";
+import Users from "../Home/Navbar/LogIn/Users";
 
 const router =createBrowserRouter([
     {
@@ -64,7 +65,12 @@ const router =createBrowserRouter([
                 element:<UpdateSpot></UpdateSpot>, 
                 loader:({params})=> fetch (`http://localhost:5000/spot/${params.id}`)
 
-            },
+            }, 
+            {
+                path:"/users",
+                element:<Users></Users> ,
+                loader:()=> fetch('http://localhost:5000/user')
+            }
           
 
         ]
