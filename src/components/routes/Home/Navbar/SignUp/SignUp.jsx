@@ -1,8 +1,50 @@
-import React from 'react'; 
+import React, { useContext } from 'react'; 
 import sign1 from '../../../../../../public/sign1.jpg'
 import { Link } from 'react-router-dom';
 import { FaUser } from "react-icons/fa6";
-const SignUp = () => {
+import { AuthContext } from '../../../../../Provider/AuthProvider';
+import Swal from 'sweetalert2';
+const SignUp = () => { 
+  const {createUser}=useContext(AuthContext); 
+
+  const handleSignUp=e =>{
+  e.preventDefault();
+  const form=e.target;
+  const name=form.name.value;
+  const email=form.email.value;
+  const photo=form.photo.value;
+  const password=form.password.value;
+  console.log(name,email,photo,password) 
+  createUser(email,password)
+  .then(result=>{
+    console.log(result.user)
+    const createdAt=result.user?.metadata?.creationTime;
+    const user={email,createdAt:createdAt} 
+    fetch('http://localhost:5000/user',{
+      method:"POST" ,
+
+      headers:{
+      'content-type':"application/json",
+
+      } ,
+      body:JSON.stringify(user)
+    }) 
+    .then(res=>res.json())
+    .then(data=>{
+     if(data.insertedId){
+      Swal.fire({
+        title: 'Success!',
+        text: 'You data Sucess',
+        icon: 'success',
+        confirmButtonText: 'Cool'
+      })
+     }
+    })
+  }) 
+  .catch(error=>{
+    console.error(error)
+  })
+  }
     return (
         <div>
 
@@ -16,7 +58,7 @@ const SignUp = () => {
           </div>
 
             <div className="mt-2 p-8 card shrink-0 lg:w-5/12 h-[550px] border-2 border-[#17eaae] shadow-2xl max-w-4xl mx-auto bg-[#FFFAFA]"> 
-            <form >
+            <form  onSubmit={handleSignUp}>
             <h1></h1>  
             <FaUser className='ml-48 text-6xl  text-[#00FF00]'></FaUser>
             <div className="form-control">

@@ -8,7 +8,7 @@ import Swal from 'sweetalert2';
 
 const LogIn = () => { 
   
-  const {createUser}=useContext(AuthContext);
+  const {signInUser}=useContext(AuthContext);
 
   const handleLogIn= e=>{
     e.preventDefault();
@@ -16,31 +16,32 @@ const LogIn = () => {
     const  email=form.email.value;
     const password=form.password.value;
     console.log(email,password)  
-    createUser(email,password) 
+    signInUser(email,password) 
+    
     .then(result=>{
       console.log(result.user) 
- const createdAt=result.user?.metadata?.creationTime;
-      const user={email,createdAt:createdAt} 
+      const user={
+        email,
+        lastLoggedAt:result.user?.metadata?.lastSignInTime
+      }  
+      // update last logged at the  atabase
+
       fetch('http://localhost:5000/user',{
-        method:"POST" ,
+        method:"PATCH" ,
 
         headers:{
-        'content-type':"application/json",
-
+          "content-type":"application/json"
         } ,
         body:JSON.stringify(user)
-      }) 
+
+      })  
+
       .then(res=>res.json())
       .then(data=>{
-       if(data.insertedId){
-        Swal.fire({
-          title: 'Success!',
-          text: 'You data Sucess',
-          icon: 'success',
-          confirmButtonText: 'Cool'
-        })
-       }
+        console.log(data);
       })
+     
+
 
     }) 
     .catch(error=>{
@@ -59,7 +60,7 @@ const LogIn = () => {
           
           </div>
          
-          <div className="card bg-[#aed6f1] w-[450px] h-[520px] shrink-0 shadow-2xl">
+          <div className="card bg-[#FFFFFF] w-[450px] h-[520px] shrink-0 shadow-2xl">
             <form className="card-body " onSubmit={handleLogIn}> 
                 
               <div className="form-control"> 
