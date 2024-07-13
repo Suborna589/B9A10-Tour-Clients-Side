@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { MdLibraryAdd } from 'react-icons/md';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2'
        const UpdateSpot = () => { 
 const spott=useLoaderData(); 
@@ -48,8 +48,9 @@ const {_id,image,spot,country,location,cost,seasonality,time,visit,description} 
               title: 'Success!',
               text: 'Tourist Spot Successfully',
               icon: 'success',
-              confirmButtonText: 'Cool'
-            })
+               confirmButtonText: 'Done'
+            }) 
+            
 
           }
         })

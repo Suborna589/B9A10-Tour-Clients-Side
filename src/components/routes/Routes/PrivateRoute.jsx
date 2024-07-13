@@ -1,16 +1,23 @@
-import React, { useContext } from 'react';
-import { Navigate } from 'react-router-dom';
+import React from 'react';
+import { Navigate, useLocation } from 'react-router-dom';
+import Hook from '../Hook/Hook';
 
 const PrivateRoute = ({children}) => { 
+    const {user,loading}=Hook();
+    const location =useLocation();
+if(loading){
+    return <span className="loading loading-infinity loading-lg"></span>
+}
 
-    const {user}=useContext(AuthContext); 
+    if(!user){ 
+    return  <Navigate to='/login' state={location?. pathname || '/'}></Navigate>
 
-    if(user){
-        return children;
-
-    }
-
-    return <Navigate  to='/login'></Navigate>
+}
+    return (
+        <div>
+            {children}
+        </div>
+    );
 };
 
 export default PrivateRoute;

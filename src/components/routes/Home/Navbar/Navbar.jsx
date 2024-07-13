@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-[#fdfefe] shadow-xl ">
+        <div className="navbar bg-[#FFFFE0] shadow-xl ">
         <div className="navbar-start">
           <div className="dropdown">
           
@@ -25,13 +25,13 @@ const Navbar = () => {
           
           </div> 
           <div className='flex space-x-0 items-center gap-0'>
-            <div><img className='w-14 h-14 rounded-2xl'src={logo2} /></div>
-            <div className=" pl-0 text-xl space-x-0"><span className='text-[#1ddb14] font-bold text-4xl mr-18'>TOUR </span><span className='text-[#2014db] font-bold text-4xl'>SPHERE</span></div>
+            <div><Link to='/'><img className='w-14 h-14 rounded-2xl'src={logo2} /></Link></div>
+            <div className=" pl-0 text-xl space-x-0"><span className='text-[#1ddb14] font-bold text-4xl mr-18'>TOUR </span><span className='text-[orangered] font-bold text-4xl'>SPHERE</span></div>
 
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 text-xl text-[#14d2db] font-semibold">
+          <ul className="menu menu-horizontal px-1 text-xl text-[#00BFFF] font-semibold">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/addspot">Add Tourists Spot</Link></li>
             <li><Link to="/list">My List</Link></li>

@@ -1,14 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import login from '../../../../../../public/login.jpg' 
 import { Link } from 'react-router-dom'; 
 import { AuthContext } from '../../../../../Provider/AuthProvider'; 
 import { FaUserCircle } from "react-icons/fa";
 import Swal from 'sweetalert2';
+import {FaEye, FaEyeSlash } from "react-icons/fa6";
 
-
-const LogIn = () => { 
+const LogIn = () => {  
+  const [showPassword,setShowPassword]=useState(false)
   
-  const {signInUser}=useContext(AuthContext);
+  const {signInUser,googleLogin,setUsers}=useContext(AuthContext);
 
   const handleLogIn= e=>{
     e.preventDefault();
@@ -38,21 +39,28 @@ const LogIn = () => {
 
       .then(res=>res.json())
       .then(data=>{
-        console.log(data);
+        console.log(data); 
+     
       })
      
-
-
     }) 
     .catch(error=>{
       console.error(error)
-    })
+    }) 
+  
 
-  } 
+    
+    
+
+  }  
+  const handleGoogleLogin=()=>{
+    googleLogin() 
+    .then(result=>setUsers(result.user))
+  }
     return (
         <div className="hero bg-[url('https://i.ibb.co/MpZy65v/users.webp')]  min-h-screen">
         <div className="hero-content lg:flex-row gap-24"> 
-        {/* lg:flex-row-reverse">  */}
+      
 
         <div className="text-center lg:text-left">
             <img className=' w-[560px] h-[440px] rounded-xl' src={login} alt="" /> 
@@ -71,11 +79,17 @@ const LogIn = () => {
                 </label>
                 <input type="email"  name='email' placeholder="email" className="input input-bordered" required />
               </div>
-              <div className="form-control">
+              <div className="form-control relative">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text">Password</span> 
+                  
                 </label>
-                <input type="password" name='password' placeholder="password" className="input input-bordered" required />
+                <input type={showPassword ? "text":"password"} name='password' placeholder="password" className="input input-bordered" required /> 
+                <span className='absolute top-1/3 mt-3 lg:ml-80 sm:ml-60 text-lg'  onClick={()=>setShowPassword(!showPassword)}>
+                  {
+                    showPassword ?    <FaEye></FaEye>  : <FaEyeSlash></FaEyeSlash>
+                  }
+                </span>
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                 </label>
@@ -86,7 +100,8 @@ const LogIn = () => {
 
              <p className='flex gap-12 text-center ml-6 mt-3'>Create have an Account?<Link to='/signup' className='text-[#0000FF] font-bold '>SignUp</Link></p>
             </form> 
-          
+            <button onClick={handleGoogleLogin} className="btn bg-[#FFA500] text-white font-bold">Google</button>
+
           </div>
         </div>
       </div>

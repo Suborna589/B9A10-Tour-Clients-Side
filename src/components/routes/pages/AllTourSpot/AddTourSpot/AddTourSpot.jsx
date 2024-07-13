@@ -46,7 +46,7 @@ import Swal from 'sweetalert2'
               title: 'Success!',
               text: 'Tourist Spot Added Successfully',
               icon: 'success',
-              confirmButtonText: 'Cool'
+              confirmButtonText: 'Done'
             })
 
           }
@@ -62,7 +62,7 @@ import Swal from 'sweetalert2'
   <div>
       <div className='bg-[url("https://i.ibb.co/fdjrXkv/add.webp")] w-[1350px]  rounded-xl h-[50px] pb-[400px]  bg-cover  text-center rounded-xl  justify-center mt-8 mx-auto max-w-8xl'>
       <p className='text-white text-4xl  pt-48 font-bold pb-6'>Added Tourist Spot </p> 
-   <Link className ='text-xl font-semibold' to='/'><span className='text-[#f36012] '>Go Home</span></Link>  
+    
   </div>
         <div className='bg-[#FFFAFA] w-[1120px] h-[700px] p-6 ml-32 mb-10 rounded-xl mt-12 shadow-xl' >  
         <div className='flex'>

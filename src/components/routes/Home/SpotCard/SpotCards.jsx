@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-const SpotCards = ({tourists}) => {
-    const{image_url,tourist_spot_name,average_cost,totalVisitorsPerYear,travel_time,seasonality,short_description}=tourists;
+const SpotCards = ({tourists}) => { 
+  
+    const{image_url,tourist_spot_name,average_cost,totalVisitorsPerYear,travel_time,seasonality,short_description,_id}=tourists;
     return (
         <div> 
             <div className="card card-compact bg-base-100 h-[500px] w-[400px] shadow-xl">
@@ -17,9 +17,14 @@ const SpotCards = ({tourists}) => {
     <p> Tour time: {travel_time}</p>
     <p> Season: {seasonality}</p> 
     <p>{short_description}</p>
+
+    
    
     <div className="card-actions justify-center">
-   <Link to='/details'><button className="btn bg-[#00FF00] font-bold text-white text-lg">View Details</button></Link>
+   <Link to='/details'><button className="btn bg-[#00FF00] font-bold text-white text-lg">View Details</button></Link> 
+
+
+
    
     </div>
   </div>

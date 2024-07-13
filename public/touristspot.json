@@ -51,18 +51,7 @@
     },
 
   
-    {
-      "id": 5,
-      "image_url": "https://i.ibb.co/Jsq1CJN/spot-23.webp",
-      "tourist_spot_name": "Phi Phi Islands",
-      "country_Name": "Thailand",
-      "location": "Southern region",
-      "short_description": "A stunning archipelago known for its crystal-clear waters, beautiful beaches, and vibrant marine life.",
-      "average_cost": 950,
-      "seasonality": "All year",
-      "travel_time": "5 days",
-      "totalVisitorsPerYear": 120000
-    },
+ 
     {
       "id": 6,
       "image_url": "https://i.ibb.co/TL7GXgJ/spot-11.webp",
@@ -88,18 +77,7 @@
       "travel_time": "6 days",
       "totalVisitorsPerYear": 140000
     },
-    {
-      "id": 8,
-      "image_url": "https://i.ibb.co/qMHTy1K/spot-22.jpg",
-      "tourist_spot_name": "Raja Ampat Islands",
-      "country_Name": "Indonesia",
-      "location": "West Papua",
-      "short_description": "A pristine archipelago known for its rich marine biodiversity and diving spots.",
-      "average_cost": 1500,
-      "seasonality": "All year",
-      "travel_time": "8 days",
-      "totalVisitorsPerYear": 100000
-    },
+
   
     {
       "id": 9,
@@ -139,23 +117,11 @@
       "seasonality": "Spring",
       "travel_time": "4 days",
       "totalVisitorsPerYear": 250000
-    },
+    }
 
   
   
   
   
-    {
-      "id": 12,
-      "image_url": "https://i.ibb.co/yyndNMv/spot-18.png",
-      "tourist_spot_name": "Bokor National Park",
-      "country_Name": "Cambodia",
-      "location": "Southwestern Cambodia",
-      "short_description": "A national park known for its cool climate, waterfalls, and abandoned French colonial buildings.",
-      "average_cost": 950,
-      "seasonality": "Winter",
-      "travel_time": "4 days",
-      "totalVisitorsPerYear": 500000
-    }
   ]
   

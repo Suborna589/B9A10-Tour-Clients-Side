@@ -1,10 +1,18 @@
-import React from 'react';
+
 import BannerSlider from './BannerSlider/BannerSlider';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
+import React, { useState } from 'react';
 import SpotCards from './SpotCard/SpotCards';
 
 const Home = () => {
-    const tourists=useLoaderData();
+    const tourists=useLoaderData(); 
+    const[seeElment,setSeeElement]=useState(6) 
+    const [showbutton ,setShowButton]=(" ")
+    const seeMore=()=>{
+        setSeeElement((prevValue)=>prevValue+3)
+    } 
+
+    const slice=tourists.slice(0,seeElment);
     return (
         <div> 
 
@@ -18,12 +26,22 @@ const Home = () => {
 </div>
 <div className='lg:grid grid-cols-3 gap-12 sm:col-span-1  gap-16 mr-16 mb-8 ml-10 '>
 {
-                 tourists.map(tourist=> <SpotCards
+                slice.map(tourist=> <SpotCards
                         key={tourist.id} 
                         tourists={tourist}>
                        
                     </SpotCards>)
-                }
+                } 
+<div>
+
+
+
+
+<button  type="button" className =" select-none rounded-lg bg-amber-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-black shadow-md shadow-amber-500/20 transition-all hover:shadow-lg hover:shadow-amber-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+         onClick={
+            seeMore}>See More</button>
+
+</div>
 </div> 
 
 
