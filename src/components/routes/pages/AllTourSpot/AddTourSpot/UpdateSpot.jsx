@@ -2,11 +2,16 @@
 
 import React from 'react';
 import { MdLibraryAdd } from 'react-icons/md';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
        const UpdateSpot = () => { 
 const spott=useLoaderData(); 
-const {_id,image,spot,country,location,cost,seasonality,time,visit,description} =spott;
+const {_id,image,spot,country,location,cost,seasonality,time,visit,description} =spott; 
+
+
+const navigate =useNavigate() 
+   
+const from= '/list';
            const handleUpdateTourSpot= event=>{  
       event.preventDefault(); 
         const form=event.target; 
@@ -48,12 +53,22 @@ const {_id,image,spot,country,location,cost,seasonality,time,visit,description} 
               title: 'Success!',
               text: 'Tourist Spot Successfully',
               icon: 'success',
-               confirmButtonText: 'Done'
-            }) 
+               confirmButtonText: 'Done' 
+
+              
+              
+                
+            })  
+            .then(()=>{  
+ 
+              window.location.reload()  
+             }) 
             
 
           }
         })
+
+        navigate(from) 
 
      
 

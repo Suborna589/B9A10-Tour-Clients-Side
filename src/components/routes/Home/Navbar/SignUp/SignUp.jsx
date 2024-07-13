@@ -26,6 +26,13 @@ const SignUp = () => {
   const password=form.password.value;   
 
   
+
+
+    
+
+
+
+  
 createUser( email,password) 
   
 .then(()=>{  

@@ -1,8 +1,14 @@
 import React from 'react';
 import { MdLibraryAdd } from 'react-icons/md';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
-       const AddTourSpot = () => { 
+       const AddTourSpot = () => {  
+
+
+
+        const navigate =useNavigate() 
+   
+  const from= '/list';
 
            const handleAddTourSpot= event=>{  
       event.preventDefault(); 
@@ -38,20 +44,34 @@ import Swal from 'sweetalert2'
 
         })
 
+
+         
         .then(res=>res.json()) 
         .then(data=>{
-          console.log(data); 
-          if(data.insertedId){ 
+          console.log(data);
+          
+          if(data.insertedId){  
             Swal.fire({
               title: 'Success!',
               text: 'Tourist Spot Added Successfully',
               icon: 'success',
               confirmButtonText: 'Done'
-            })
+
+
+            })  
+
+            .then(()=>{  
+ 
+              window.location.reload()  
+             })
+
+
 
           }
-        })
-
+        })   
+        navigate(from)
+       
+ 
      
 
     }

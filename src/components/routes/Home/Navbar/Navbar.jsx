@@ -1,8 +1,10 @@
 import React from 'react'; 
 import logo2 from '../../../../../public/logo2.jpg'
 import { Link } from 'react-router-dom';
+import Hook from '../../Hook/Hook';
 
-const Navbar = () => {
+const Navbar = () => { 
+  const {logOut,user}=Hook() 
     return (
         <div className="navbar bg-[#FFFFE0] shadow-xl ">
         <div className="navbar-start">
@@ -39,9 +41,48 @@ const Navbar = () => {
             <li><Link to="/allspot">All Tourists Spot</Link></li>
           </ul>
         </div>
-        <div className="navbar-end gap-2">
-          <Link to="/login" className=" text-white text-lg btn btn-outline btn-accent font-bold rounded-xl ">LOGIN</Link>
-          <Link to="/signup"className="btn btn-outline btn-accent text-white text-lg font-bold  rounded-xl ">SIGNUP</Link>
+  
+
+          <div className="navbar-end"> 
+  {
+      user ? 
+  <div>
+
+      <div className="dropdown dropdown-end">
+      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+        <div className="w-10 rounded-full">
+          <img  src= {user?.photoURL||"https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" }/>   
+
+  
+        </div>
+      </div>
+      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[2] p-2 shadow bg-base-100 text-center rounded-box w-52">
+        <li>
+          <a className="pl-12">
+            User Profile
+          </a>
+        </li>
+        <li><button className="btn  btn-ghost"> {user?.displayName||'name not found'}</button></li>
+        <li><button onClick={logOut} className='btn btn-ghost btn-warning font-bold rounded-xl mr-6'>LOGOUT</button></li>
+      </ul>
+    </div> 
+    </div> 
+    
+   
+    
+ 
+       
+        :
+        <div className='space-x-3'>
+        <Link  to='/login' className="btn btn-outline btn-accent text-white text-lg font-bold  rounded-xl">LOGIN</Link>  
+        <Link  to='/signup' className="btn btn-outline btn-accent text-white text-lg font-bold  rounded-xl">SIGNUP</Link>   
+        </div>
+
+      
+      }
+  
+
+  
         </div>
       </div>
     );
